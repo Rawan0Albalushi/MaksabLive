@@ -7,42 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Maksab Brand Colors
-        maksab: {
-          coral: '#F26F59',       // Primary coral/orange
-          teal: '#25B0BA',        // Primary teal/turquoise
-          'coral-light': '#F7968A',
-          'coral-dark': '#D95A46',
-          'teal-light': '#4DC4CC',
-          'teal-dark': '#1D9099',
+        surface: {
+          DEFAULT: '#0F0F12',
+          elevated: '#1A1A1F',
+          hover: '#252529',
         },
-        dark: {
-          900: '#0a0a0b',
-          800: '#111113',
-          700: '#18181b',
-          600: '#1f1f23',
-          500: '#27272a',
+        primary: {
+          DEFAULT: '#10B981',
+          light: '#34D399',
+          dark: '#059669',
         },
         accent: {
-          primary: '#F26F59',    // Maksab coral
-          secondary: '#25B0BA',  // Maksab teal
-          tertiary: '#F7968A',   // Coral light
-          cyan: '#25B0BA',       // Teal
-          emerald: '#1D9099',    // Teal dark
+          DEFAULT: '#F59E0B',
+          light: '#FBBF24',
+          dark: '#D97706',
         },
-        glass: {
-          white: 'rgba(255, 255, 255, 0.03)',
-          border: 'rgba(255, 255, 255, 0.08)',
-          hover: 'rgba(255, 255, 255, 0.06)',
-        }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'mesh-gradient': 'linear-gradient(135deg, #F26F59 0%, #D95A46 25%, #25B0BA 75%, #1D9099 100%)',
-        'aurora': 'linear-gradient(135deg, rgba(242, 111, 89, 0.15) 0%, rgba(37, 176, 186, 0.15) 100%)',
-        'maksab-gradient': 'linear-gradient(135deg, #F26F59 0%, #25B0BA 100%)',
-        'maksab-gradient-reverse': 'linear-gradient(135deg, #25B0BA 0%, #F26F59 100%)',
       },
       animation: {
         'glow': 'glow 4s ease-in-out infinite',
@@ -53,17 +36,15 @@ export default {
         'slide-down': 'slide-down 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         'spin-slow': 'spin 8s linear infinite',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'morph': 'morph 8s ease-in-out infinite',
-        'bounce-soft': 'bounce-soft 2s ease-in-out infinite',
+        'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
       },
       keyframes: {
         'glow': {
           '0%, 100%': {
-            boxShadow: '0 0 20px rgba(242, 111, 89, 0.3), 0 0 40px rgba(37, 176, 186, 0.2)',
+            boxShadow: '0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(245, 158, 11, 0.2)',
           },
           '50%': {
-            boxShadow: '0 0 40px rgba(242, 111, 89, 0.5), 0 0 80px rgba(37, 176, 186, 0.3)',
+            boxShadow: '0 0 40px rgba(16, 185, 129, 0.5), 0 0 80px rgba(245, 158, 11, 0.3)',
           },
         },
         'shimmer': {
@@ -90,28 +71,20 @@ export default {
         'pulse-glow': {
           '0%, 100%': {
             opacity: '1',
-            boxShadow: '0 0 20px rgba(242, 111, 89, 0.5)',
+            boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)',
           },
           '50%': {
             opacity: '0.8',
-            boxShadow: '0 0 40px rgba(37, 176, 186, 0.7)',
+            boxShadow: '0 0 40px rgba(245, 158, 11, 0.7)',
           },
         },
-        'gradient-x': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-        'morph': {
-          '0%, 100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
-          '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
-        },
-        'bounce-soft': {
+        'bounce-slow': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       fontFamily: {
-        'display': ['IBM Plex Sans Arabic', 'Syne', 'sans-serif'],
+        'display': ['IBM Plex Sans Arabic', 'sans-serif'],
         'arabic': ['IBM Plex Sans Arabic', 'sans-serif'],
       },
       backdropBlur: {
@@ -121,3 +94,4 @@ export default {
   },
   plugins: [],
 }
+
